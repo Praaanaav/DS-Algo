@@ -5,8 +5,6 @@ class Solution {
             if(nums[i]!=val){
                 nums[c] = nums[i];  
                 c++;
-            }else{
-                continue;
             }
         }
         return c;
