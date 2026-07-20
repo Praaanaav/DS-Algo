@@ -11,15 +11,15 @@ class Solution {
                 c[i] = c[i - 1] + 1;
             }
         }
+        int total = c[n-1] ;
         for ( int i = n-2; i>=0;i--){
             if (ratings[i] > ratings[i + 1]) {
                 c[i] = Math.max(c[i],c[i+1]+1);
             }
+            total+= c[i];
         }
-        int total = 0 ;
-        for (int cs : c){
-            total+= cs;
-        }
+        
+        
         return total;
     }
 }
